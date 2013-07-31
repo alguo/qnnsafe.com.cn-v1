@@ -1,0 +1,115 @@
+!!!
+%html.no-js
+  %head
+    %meta{ charset: "UTF-8" }
+    %title {% if page.full_title %}{{ page.full_title }}{% else %}{% if page.title %}{{ page.title }}-{% endif %}{{ site.title }}{% endif %}
+    %meta{ name: 'keywords', content: '{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}' }
+    %meta{ content: '{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}', name: 'description' }
+    %meta{ content: "IE=edge", "http-equiv" => "X-UA-Compatible" }
+    %script{ type: "text/javascript", src: "/assets/vendor/javascripts/jquery-1.10.2.min.js" }
+    {% javascript application %}
+    {% stylesheet application %}
+  %body{ class: "{% if page.body_style %}{{ page.body_style }}{% else %}blank{% endif %}" }
+    %header
+      %a.logo{ href: "{{ site.www.qnnsafe.com }}/" } 全能保险柜
+    %nav
+      %ul.nav
+        %li<
+          %a{ id: "nav-catalog", href: "{{ site.www.qnnsafe.com }}/" } 全能产品库
+        %li{ class: "{% if page.belongs_to == 'about' %}active{% endif %}" }<
+          %a{ id: "nav-about", href: "{{ site.www.qnnsafe.com }}/about/" } 认识全能
+        %li{ class: "{% if page.url contains 'cases' %}active{% endif %}" }<
+          %a{ id: "nav-cases", href: "{{ site.www.qnnsafe.com }}/cases/" } 工程案例
+        %li{ class: "{% if page.belongs_to == 'support' %}active{% endif %}" }<
+          %a{ id: "nav-support", href: "{{ site.www.qnnsafe.com }}/support/" } 服务与支持
+        %li<
+          %a{ id: "nav-franchise", href: "{{ site.www.qnnsafe.com }}/", target: "_blank" } 招商加盟
+        %li{ class: "{% if page.url contains '/stores/' %}active{% endif %}" }<
+          %a{ id: "nav-stores", href: "{{ site.www.qnnsafe.com }}/stores/" } 销售网点
+        %li{ class: "{% if page.belongs_to == 'contact' %}active{% endif %}" }<
+          %a{ id: "nav-contact", href: "{{ site.www.qnnsafe.com }}/contact/" } 联系我们
+      #catalog.catalog
+        %ul.line
+          %li
+            .figure
+            %ul.model
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/b-5440.html", title: "家用保险柜全能金库" } 全能金库
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/bw-6960.html", title: "家用保险箱风生水起" } 风生水起
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/kl-4045.html", title: "保险柜十大品牌可拉珍藏" } 可拉珍藏
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/gtx-3345.html", title: "保险柜钢铁侠" } 钢铁侠
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/glf-3340.html", title: "保险箱高尔夫" } 高尔夫
+          %li
+            .figure
+            %ul.model
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/zf-3342.html", title: "保险柜十大品牌可拉珍藏" } 指点江山
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/hg-2740.html", title: "保险柜十大品牌可拉珍藏" } 新皇冠
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/sjb-1630br.html", title: "保险柜十大品牌可拉珍藏" } 铁管家
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/tgg-2040br.html", title: "保险柜十大品牌可拉珍藏" } 铁金刚
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/fg-2940br.html", title: "保险柜十大品牌可拉珍藏" } 钢将军
+          %li
+            .figure
+            %ul.model
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/mi-2045uzh.html", title: "保险柜十大品牌可拉珍藏" } 酒店客房保管箱
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/mg-2043zh", title: "保险柜十大品牌可拉珍藏" } 酒店大堂保管箱
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/bmg-7545ab.html", title: "保险柜十大品牌可拉珍藏" } 文件保密柜
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/dg-6950c.html", title: "保险柜十大品牌可拉珍藏" } 投币式保险柜
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/cw-7348.html", title: "保险柜十大品牌可拉珍藏" } 藏宝系列
+          %li
+            .figure
+            %ul.model
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/cs-2018d.html", title: "保险柜十大品牌可拉珍藏" } 安固系列
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/rk-25.html", title: "保险柜十大品牌可拉珍藏" } 高安全性保险柜
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/if-1500c.html", title: "保险柜十大品牌可拉珍藏" } 地藏式保险柜
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/jkm(m)-1020-n.html", title: "保险柜十大品牌可拉珍藏" } 金库门
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/", title: "保险柜十大品牌可拉珍藏" } 智能枪柜
+          %li
+            .figure
+            %ul.model
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/ws-108.html", title: "保险柜十大品牌可拉珍藏" } 嵌墙式保险柜
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/", title: "保险柜十大品牌可拉珍藏" } 枪柜系列
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/cases/", title: "保险柜十大品牌可拉珍藏" } 金融专业柜
+              %li<
+                %a{ href: "{{ site.www.qnnsafe.com }}/cases/", title: "保险柜十大品牌可拉珍藏" } 订造柜
+    {{ content }}
+    %footer
+      .left
+        &copy; 1999-2013 广东安能保险柜制造有限公司 
+        %a{ href: "http://www.miitbeian.gov.cn/" }粤ICP备12015444号-1
+        %a{ href: "{{ site.www.qnnsafe.com }}/Sitemap.xml" }Sitemap
+        %br
+        网站建设维护与优化：
+        %a{ href: "http://www.8html.com/" }8HTML    
+      .right
+        选择你的国家或地区：
+        %a{ href: "http://www.qnnsafes.com/", class: "lang lang-en" } English
+        %a{ href: "{{ site.www.qnnsafe.com }}/", class: "lang lang-zh" } 中文
+        .clear
+      .clear
+  :javascript
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e18bb93e1e930f408dc69df159c0a0f' type='text/javascript'%3E%3C/script%3E"));
+  /
+    Generated on {{ site.time }}, using Jekyll, Haml, Sass, CoffeeScript.
+    Source of this website can be found on https://github.com/qnn/qnnsafe.com-v1

@@ -19,11 +19,13 @@
         %li{ class: "{% if page.belongs_to == 'about' %}active{% endif %}" }<
           %a{ id: "nav-about", href: "{{ site.www.qnnsafe.com }}/about/" } 认识全能
         %li{ class: "{% if page.url contains 'cases' %}active{% endif %}" }<
-          %a{ id: "nav-cases", href: "{{ site.www.qnnsafe.com }}/cases/" } 工程案例
-        %li{ class: "{% if page.belongs_to == 'support' %}active{% endif %}" }<
-          %a{ id: "nav-support", href: "{{ site.www.qnnsafe.com }}/support/" } 服务与支持
+          %a{ id: "nav-cases", href: "{{ site.www.qnnsafe.com }}/cases/" } 成功案例
+        %li{ class: "{% if page.belongs_to == 'news' %}active{% endif %}" }<
+          %a{ id: "nav-support", href: "{{ site.www.qnnsafe.com }}/news/" } 最新资讯
         %li<
-          %a{ id: "nav-franchise", href: "{{ site.www.qnnsafe.com }}/", target: "_blank" } 招商加盟
+          %a{ id: "nav-franchise", href: "{{ site.www.qnnsafe.com }}/", target: "_blank" } 加盟须知
+        %li{ class: "{% if page.url contains '/stores/' %}active{% endif %}" }<
+          %a{ id: "nav-stores", href: "{{ site.www.qnnsafe.com }}/stores/" } 加盟流程
         %li{ class: "{% if page.url contains '/stores/' %}active{% endif %}" }<
           %a{ id: "nav-stores", href: "{{ site.www.qnnsafe.com }}/stores/" } 销售网点
         %li{ class: "{% if page.belongs_to == 'contact' %}active{% endif %}" }<

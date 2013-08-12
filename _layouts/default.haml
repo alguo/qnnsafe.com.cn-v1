@@ -11,25 +11,19 @@
     {% stylesheet application %}
   %body{ class: "{% if page.body_style %}{{ page.body_style }}{% else %}blank{% endif %}" }
     %header
-      %a.logo{ href: "{{ site.www.qnnsafe.com }}/" } 全能保险柜
+      %a.logo{ href: "{{ site.www.qnnsafe.com.cn }}/" } 全能保险柜
     %nav
       %ul.nav
-        %li<
-          %a{ id: "nav-catalog", href: "{{ site.www.qnnsafe.com }}/" } 全能产品库
-        %li{ class: "{% if page.belongs_to == 'about' %}active{% endif %}" }<
-          %a{ id: "nav-about", href: "{{ site.www.qnnsafe.com }}/about/" } 认识全能
         %li{ class: "{% if page.url contains 'cases' %}active{% endif %}" }<
-          %a{ id: "nav-cases", href: "{{ site.www.qnnsafe.com }}/cases/" } 成功案例
+          %a{ id: "nav-cases", href: "{{ site.www.qnnsafe.com.cn }}/cases/" } 财富书
+        %li{ class: "{% if page.belongs_to == 'about' %}active{% endif %}" }<
+          %a{ id: "nav-about", href: "{{ site.www.qnnsafe.com.cn }}/about/" } 全能商机
         %li{ class: "{% if page.belongs_to == 'news' %}active{% endif %}" }<
-          %a{ id: "nav-support", href: "{{ site.www.qnnsafe.com }}/news/" } 最新资讯
+            %a{ id: "nav-support", href: "{{ site.www.qnnsafe.com.cn }}/news/" } 财富导航
         %li<
-          %a{ id: "nav-franchise", href: "{{ site.www.qnnsafe.com }}/", target: "_blank" } 加盟须知
-        %li{ class: "{% if page.url contains '/stores/' %}active{% endif %}" }<
-          %a{ id: "nav-stores", href: "{{ site.www.qnnsafe.com }}/stores/" } 加盟流程
-        %li{ class: "{% if page.url contains '/stores/' %}active{% endif %}" }<
-          %a{ id: "nav-stores", href: "{{ site.www.qnnsafe.com }}/stores/" } 销售网点
+          %a{ id: "nav-catalog", href: "{{ site.www.qnnsafe.com.cn }}/" } 全能产品库
         %li{ class: "{% if page.belongs_to == 'contact' %}active{% endif %}" }<
-          %a{ id: "nav-contact", href: "{{ site.www.qnnsafe.com }}/contact/" } 联系我们
+          %a{ id: "nav-contact", href: "{{ site.www.qnnsafe.com.cn }}/contact/" } 财富热线
       #catalog.catalog
         %ul.line
           %li

@@ -15,7 +15,7 @@
     %nav
       %ul.nav
         %li<
-          %a{ id: "nav-catalog", href: "{{ site.www.qnnsafe.com }}/" } 财富书
+          %a{ id: "nav-books", href: "{{ site.www.qnnsafe.com }}/books/" } 财富书
         %li{ class: "{% if page.belongs_to == 'about' %}active{% endif %}" }<
           %a{ id: "nav-about", href: "{{ site.www.qnnsafe.com }}/about/" } 全能商机
         %li{ class: "{% if page.url contains 'cases' %}active{% endif %}" }<
@@ -26,8 +26,8 @@
           %a{ id: "nav-cases", href: "{{ site.www.qnnsafe.com }}/news/" } 加盟信息
         %li{ class: "{% if page.belongs_to == 'support' %}active{% endif %}" }<
           %a{ id: "nav-support", href: "{{ site.www.qnnsafe.com }}/network/" } 销售网络
-        %li{ class: "{% if page.belongs_to == 'support' %}active{% endif %}" }<
-          %a{ id: "nav-support", href: "{{ site.www.qnnsafe.com }}/support/" } 全能产品
+        %li<
+          %a{ id: "nav-catalog", href: "#" } 全能产品
         %li{ class: "{% if page.belongs_to == 'contact' %}active{% endif %}" }<
           %a{ id: "nav-contact", href: "{{ site.www.qnnsafe.com }}/contact/" } 联系我们
       #catalog.catalog

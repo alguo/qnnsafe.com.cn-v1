@@ -41,12 +41,45 @@ header, nav {
   padding-right: 15px;
 }
 
+header {
+  height: 50px;
+  position: relative;
+}
+
 a.logo {
+  position: absolute;
+  top: 10px;
+  left: 15px;
   display: block;
   background: url(/assets/images/qnn-logo.png);
   width: 329px;
   height: 50px;
   text-indent: -9999px;
+}
+
+.header_text {
+  position: absolute;
+  bottom: 8px;
+  left: 356px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.header_info {
+  position: absolute;
+  bottom: 8px;
+  right: 15px;
+  text-align: right;
+  font-size: 14px;
+  line-height: 22px;
+  a {
+    color: #000;
+    text-decoration: none;
+    &:hover {
+      color: #ec2738;
+      text-decoration: none;
+    }
+  }
 }
 
 nav {

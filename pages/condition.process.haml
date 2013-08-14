@@ -15,7 +15,7 @@ description: 安能保险柜旗下保险柜十大品牌全能保险柜致力创�
       %li
         %a{ href: "/condition/" } 加盟条件
       %li.active
-          %a{ href: "/process/" } 加盟流程
+        %a{ href: "/process/" } 加盟流程
       %li
         %a{ href: "/support/" } 政策支持与保障
       %li
@@ -52,19 +52,19 @@ description: 安能保险柜旗下保险柜十大品牌全能保险柜致力创�
       %p.cb_content
         加强双方的信息交流，解决在销售过程中疑难问题，帮助投资方进一步提升业绩，增强市场地位。于此同时不间断反馈公司的新产品动向和市场发展趋势信息，而投资方也应积极主动把市场前沿信息反馈至公司总部。
   .block.h50px
-:javascript
-  if (Modernizr.cssanimations) {
-    $(".pageTop").css({opacity: 0}).each(function(i){
-      var val=i*200+'ms';
-      $(this).css({
-        '-webkit-animation-delay':val,
-        '-moz-animation-delay':val,
-        '-o-animation-delay':val,
-        'animation-delay':val
+  :javascript
+    if (Modernizr.cssanimations) {
+      $(".pageTop").css({opacity: 0}).each(function(i){
+        var val=i*200+'ms';
+        $(this).css({
+          '-webkit-animation-delay':val,
+          '-moz-animation-delay':val,
+          '-o-animation-delay':val,
+          'animation-delay':val
+        });
       });
-    });
-    $(function(){
-      $(".pageTop").addClass("play");
-    });
-  }
+      $(function(){
+        $(".pageTop").addClass("play");
+      });
+    }
   .block.h50px

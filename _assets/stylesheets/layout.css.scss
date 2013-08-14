@@ -61,7 +61,7 @@ a.logo {
   position: absolute;
   color: #666;
   bottom: 8px;
-  left: 356px;
+  left: 348px;
   font-size: 16px;
   font-weight: bold;
 }
@@ -69,13 +69,13 @@ a.logo {
 .header_info {
   position: absolute;
   color: #666;
-  bottom: 8px;
-  right: 15px;
+  bottom: 5px;
+  right: 20px;
   text-align: right;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 19px;
+  line-height: 28px;
   a {
-    color: #000;
+    color: #666;
     text-decoration: none;
     &:hover {
       color: #ec2738;

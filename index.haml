@@ -1,8 +1,16 @@
 ---
 layout: default
-full_title: 全能保险柜招商加盟
+full_title: 全能保险柜官网-保险柜,保险箱,家用保险柜箱,保险柜十大品牌
 ---
 %article#billboard
+  .bb.active
+    .link
+      %a{ href: "{{ site.www.qnnsafe.com }}/b-5440.html" } B-5540
+    .title.one
+      %img{ src: "http://images.qnnsafe.com/v1/b5540_text_01.png" }
+    .subtitle
+    .image
+      %img{ src: "http://images.qnnsafe.com/v1/b5540_01.jpg" }
   .bb
     .link
       %a{ href: "{{ site.www.qnnsafe.com }}/gtx-5842.html" } GTX-5842
@@ -15,13 +23,13 @@ full_title: 全能保险柜招商加盟
 #promo
   %ul
     %li
-      %a{ class: "promo_01", title: "全能TV" }
+      %a{ href: "{{ site.www.qnnsafe.com }}/", class: "promo_01" }
     %li
-      %a{ href: "{{ site.www.qnnsafe.com }}/cases/", class: "promo_02", title: "全能保险柜酒店工程案例" }
+      %a{ href: "{{ site.www.qnnsafe.com }}/cases/", class: "promo_02" }
     %li
-      %a{ href: "{{ site.www.qnnsafe.com }}/network/", class: "promo_03", title: "全能保险柜销售网点" }
+      %a{ href: "{{ site.www.qnnsafe.com }}/stores/", class: "promo_03" }
     %li
-      %a{ href: "{{ site.www.qnnsafe.com }}/support/", class: "promo_04", title: "全能保险柜服务与支持" }
+      %a{ href: "{{ site.www.qnnsafe.com }}/support/", class: "promo_04" }
 #newsslider.wide.sliderkit.newslider-minimal
   .left<
     %a{ href: "{{ site.www.qnnsafe.com }}/news/" }<> 加盟信息
@@ -32,4 +40,3 @@ full_title: 全能保险柜招商加盟
       %a{ href: '{{ site.www.qnnsafe.com }}{{ post.url }}', title: '{{ post.title }}' }<> {{ post.title }}
       %span.date {{ post.date | date:"%Y年%m月%d日" }}
     {% endfor %}
-    

@@ -8,18 +8,6 @@ description: 在这里我们会为您展示更多最新的关于全能保险柜�
 ---
 .banner.banner-news
 %article
-  -# 请同时更改 _layouts/news_category.haml
-  .page_nav
-    %ul
-      %li.active<
-        %a{ href: "/news/" } 加盟信息
-      %li<
-        %a{ href: "/news/enterprise-news/" } 政策动态
-      %li<
-        %a{ href: "/news/media-reports/" } 开店贺电
-      %li.dropdown<
-        %a{ href: "#" }<
-          %span.triangle.down
   #newslist.center_content
     %ul
       {% for post in site.categories["news"] %}

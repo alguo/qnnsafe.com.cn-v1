@@ -36,8 +36,7 @@ full_title: 全能保险柜加盟网-加盟赚钱好项目,加盟创业新项目
     %a{ href: "{{ site.www.qnnsafe.com }}/news/" }<> 加盟信息
   .sliderkit-panels
     {% for post in site.categories["news"] limit:300 %}
-    .sliderkit-panel<
-      = '〔{{ post.type }}〕'
+    .sliderkit-panel
       %a{ href: '{{ site.www.qnnsafe.com }}{{ post.url }}', title: '{{ post.title }}' }<> {{ post.title }}
       %span.date {{ post.date | date:"%Y年%m月%d日" }}
     {% endfor %}

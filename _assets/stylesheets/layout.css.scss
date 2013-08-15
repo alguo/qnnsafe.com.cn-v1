@@ -72,10 +72,11 @@ a.logo {
   bottom: 5px;
   right: 20px;
   text-align: right;
-  font-size: 16px;
+  font-size: 19px;
   line-height: 28px;
+  font-weight: bold;
   a {
-    color: #666;
+    color: #000;
     text-decoration: none;
     &:hover {
       color: #ec2738;

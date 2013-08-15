@@ -127,7 +127,7 @@
   .title {
     position: absolute;
     z-index: 1;
-    right: 0px;
+    right: 20px;
     top: 150px;
   }
 
@@ -146,7 +146,7 @@
   .title {
     position: absolute;
     z-index: 1;
-    left: 0px;
+    left: 20px;
     top: 150px;
   }
 
@@ -156,4 +156,18 @@
     top: 0px;
   }
 
+}
+
+.height_300 {
+  height: 300px;
+  .title {
+    top: 100px;
+  }
+}
+
+.height_700 {
+  height: 700px;
+  .title {
+    top: 250px;
+  }
 }

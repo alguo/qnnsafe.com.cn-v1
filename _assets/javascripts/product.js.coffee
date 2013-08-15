@@ -1,26 +1,39 @@
 jQuery ($) ->
-  children = $('#showcase > ul > li').length
-  count = Math.ceil(children / 6)
-  for page in [2..count]
-    ul = $('<ul />').insertAfter('#showcase > ul:last')
-    for item in [(page-1)*6..page*6-1]
-      child = $('#showcase > ul:first > li').eq(item)
-      if child.length == 1
-        ul.append(child.clone())
-  if children > 6
-    $('#showcase > ul:first > li').eq(5).nextAll().remove()
-  else
-    $('#showcase').addClass('shorter')
-  if count > 1
+  if (window.screen && window.screen.width > 480)
+    children = $('#product_menu > ul.ddmenu > li').length
+    count = Math.ceil(children / 6)
     for page in [1..count]
-      $('#showcase .nav').append('<a href="#">'+page+'</a>')
-  $('#showcase').catslider();
-  $('.page_nav.is_pager').find('a').click (e) ->
+      ul = $('<ul />').appendTo('#showcase')
+      for item in [(page-1)*6..page*6-1]
+        child = $('#product_menu > ul.ddmenu > li').eq(item)
+        if child.length == 1
+          ul.append(child.clone())
+    if children <= 6
+      $('#showcase').addClass('shorter')
+    $('#showcase').append('<div class="nav"></div>')
+    if count > 1
+      for page in [1..count]
+        $('#showcase .nav').append('<a href="#">'+page+'</a>')
+    $('#showcase').catslider()
+
+  $('.dropdownmenu a.btn').click (e) ->
+    e.preventDefault()
+    e.stopPropagation()
+    menu = $(this).closest('.dropdownmenu')
+    if menu.hasClass('open')
+      menu.removeClass('open')
+    else
+      menu.addClass('open')
+
+  $(document).click (e) ->
+    $('.dropdownmenu').removeClass('open')
+
+  $('.page_nav.is_pager').find('li:not(.dropdown)').find('a').click (e) ->
     e.preventDefault()
     $(this).parent().siblings('li').removeClass('active')
     $(this).parent().addClass('active')
     index = $(this).parent().index()
-    children = $(this).closest('.page_nav').siblings('.pages').children()
+    children = $('.pages').children()
     children.filter(':visible').fadeOut 'fast', ->
       children.eq(index).fadeIn 'fast'
 
@@ -30,3 +43,5 @@ jQuery ($) ->
     $(this).find('.hover').removeClass('hidden')
   , ->
     $(this).find('.hover').addClass('hidden')
+
+  $("#features").panzoom()

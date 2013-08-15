@@ -3,9 +3,17 @@
   %head
     %meta{ charset: "UTF-8" }
     %title {% if page.full_title %}{{ page.full_title }}{% else %}{% if page.title %}{{ page.title }}-{% endif %}{{ site.title }}{% endif %}
-    %meta{ name: 'keywords', content: '{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}' }
-    %meta{ content: '{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}', name: 'description' }
-    %meta{ content: "IE=edge", "http-equiv" => "X-UA-Compatible" }
+    <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+    <link href="/favicon.ico" rel="shortcut icon">
+    <link href="/assets/images/qnn-icon-152.png" rel="icon">
+    <link rel="apple-touch-icon" href="/assets/images/qnn-icon-152.png">
+    <meta name="apple-mobile-web-app-title" content="全能招商加盟">
+    <meta name="msapplication-TileImage" content="/assets/images/qnn-icon-152.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
     %script{ type: "text/javascript", src: "/assets/vendor/javascripts/jquery-1.10.2.min.js" }
     {% javascript application %}
     {% stylesheet application %}
@@ -32,7 +40,9 @@
         %li{ class: "{% if page.belongs_to == 'support' %}active{% endif %}" }<
           %a{ id: "nav-support", href: "{{ site.www.qnnsafe.com }}/network/" } 销售网络
         %li<
-          %a{ id: "nav-catalog", href: "#" } 全能产品
+          %a{ id: "nav-catalog", href: "#" }<>
+            全能产品
+            %span.triangle-down<>
         %li{ class: "{% if page.belongs_to == 'contact' %}active{% endif %}" }<
           %a{ id: "nav-contact", href: "{{ site.www.qnnsafe.com }}/contact/" } 联系我们
       #catalog.catalog
@@ -104,19 +114,22 @@
     %footer
       .left
         &copy; 1999-2013 广东安能保险柜制造有限公司 
-        %a{ href: "http://www.miitbeian.gov.cn/" }粤ICP备12015444号-10
-        %a{ href: "{{ site.www.qnnsafe.com.cn }}/Sitemap.xml" }Sitemap
+        %a.beian{ href: "http://www.miitbeian.gov.cn/" } 粤ICP备12015444号-1
+        %a.hide_if_mobile{ href: "{{ site.www.qnnsafe.com }}/Sitemap.xml" } Sitemap
         %br
         网站建设维护与优化：
-        %a{ href: "http://www.8html.com/" }8HTML    
+        %a{ href: "http://www.8html.com/" } 8HTML    
       .right
-        选择你的国家或地区：
-        %a{ href: "http://www.qnnsafes.com/", class: "lang lang-en" } English
-        %a{ href: "{{ site.www.qnnsafe.com }}/", class: "lang lang-zh" } 中文
+        %a{ href: "http://e.weibo.com/qnnsafe", class: "lang lang-weibo social-media", title: "关注全能保险柜官方微博账号", data: { mfp: { src: "/assets/images/qnn-weibo.png" } } } 全能保险柜官方微博账号
+        %a{ href: "/assets/images/qnn-weixin.png", class: "lang lang-weixin social-media", title: "扫描QR码关注全能保险柜官方微信账号" } 全能保险柜官方微信账号
+        %a{ href: "http://www.qnnsafes.com/", class: "lang lang-en", title: "English" } English
+        %a{ href: "{{ site.www.qnnsafe.com }}/", class: "lang lang-zh", title: "简体中文" } 中文
         .clear
       .clear
   :javascript
-    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e18bb93e1e930f408dc69df159c0a0f' type='text/javascript'%3E%3C/script%3E"));
+    if (window.screen && window.screen.width > 480) { // do not load this script on mobile devices
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e18bb93e1e930f408dc69df159c0a0f' type='text/javascript'%3E%3C/script%3E"));
+    }
   /
     Generated on {{ site.time }}, using Jekyll, Haml, Sass, CoffeeScript.
     Source of this website can be found on https://github.com/qnn/qnnsafe.com-v1

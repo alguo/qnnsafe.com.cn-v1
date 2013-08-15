@@ -209,4 +209,4 @@ Disallow: /zwjcg.html
 Disallow: /zy-6091.html
 Disallow: /zy-7581.html
 
-Sitemap: http://www.qnnsafe.com/Sitemap.xml
+Sitemap: http://www.qnnsafe.com.cn/Sitemap.xml

@@ -1,6 +1,11 @@
 User-agent: *
+Disallow: /360-panoramas/
+Disallow: /about/
 Disallow: /assets/
+Disallow: /history/
+Disallow: /honors/
 Disallow: /images/
+Disallow: /maps/
 Disallow: /favicon.ico
 Disallow: /asafe.html
 Disallow: /atm.html

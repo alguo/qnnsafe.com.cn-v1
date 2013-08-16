@@ -13,8 +13,6 @@ jQuery ($) ->
     that.parent().removeClass('active')
     $('#catalog').css('z-index', 5).animate { top: -500 }, 200, 'easeInQuart', ->
       that.removeClass('active').addClass('inactive')
-    if $(window).width() <= 480
-      $('ul.nav li:gt(0):lt(3)').animate { 'margin-top': 3 }, 200, 'easeInQuart'
   $.extend $.easing,
     easeInQuart: (x, t, b, c, d) ->
       c * (t /= d) * t * t * t + b
@@ -26,11 +24,9 @@ jQuery ($) ->
     that = $(this)
     if that.hasClass('inactive')
       that.parent().addClass('active')
-      $('#catalog').animate { top: 37 }, 200, 'easeOutQuart', ->
+      $('#catalog').animate { top: 80 }, 200, 'easeOutQuart', ->
         that.removeClass('inactive').addClass('active')
         $('#catalog').css('z-index', 51)
-      if $(window).width() <= 480
-        $('ul.nav li:gt(0):lt(3)').animate { 'margin-top': $('#catalog').height() + 10 }, 200, 'easeOutQuart'
     else if that.hasClass('active')
       close_catalog(that)
 

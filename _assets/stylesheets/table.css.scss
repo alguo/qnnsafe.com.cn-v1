@@ -181,3 +181,21 @@
     text-align: center;
   }
 }
+
+.honors {
+  td {
+    width: 33.3%;
+    text-align: center;
+    padding: 10px;
+    img {
+      max-width: 120px;
+      max-height: 120px;
+    }
+    strong {
+      display: block;
+      text-align: center;
+      font-size: 13px;
+      padding: 5px;
+    }
+  }
+}

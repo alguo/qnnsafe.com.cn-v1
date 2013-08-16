@@ -24,7 +24,7 @@ jQuery ($) ->
     that = $(this)
     if that.hasClass('inactive')
       that.parent().addClass('active')
-      $('#catalog').animate { top: 80 }, 200, 'easeOutQuart', ->
+      $('#catalog').animate { top: 37 }, 200, 'easeOutQuart', ->
         that.removeClass('inactive').addClass('active')
         $('#catalog').css('z-index', 51)
     else if that.hasClass('active')

@@ -188,13 +188,10 @@
     }
   }
 
-  table#manuals {
-    td:nth-of-type(1):before { content: "产品系列"; }
-    td:nth-of-type(2):before { content: "适用产品型号"; }
-    td:nth-of-type(3):before { content: "下载"; }
-    td:nth-of-type(2) {
-      font-size: 12px;
-    }
+  table#return {
+    td:nth-of-type(1):before { content: "项目"; }
+    td:nth-of-type(2):before { content: "金额/面积"; }
+    td:nth-of-type(3):before { content: "备注"; }
   }
 
   table#stores-list {

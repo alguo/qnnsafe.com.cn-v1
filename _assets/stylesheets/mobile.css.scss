@@ -67,6 +67,54 @@
   }
 }
 
+@media only screen and (max-width: 700px) {
+  header {
+    height: 70px;
+    padding-bottom: 0;
+  }
+
+  a.logo {
+    position: absolute;
+    left: 50%;
+    margin-left: (-304px / 2);
+    background: url(/assets/images/qnn-logo-smaller.png) no-repeat 0 0;
+    width: 304px;
+    height: 46px;
+  }
+
+  .header_text {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    bottom: auto;
+    margin-left: 75px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .header_info {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    line-height: 24px;
+    font-size: 14px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    a {
+      font-size: 14px;
+      &:hover {
+        font-size: 14px;
+      }
+    }
+    br {
+      display: none;
+    }
+  }
+}
+
 @media only screen and (max-width: 680px) {
   footer {
     .left {
@@ -217,15 +265,11 @@
   }
 
   header {
-    padding-top: 5px;
-    padding-bottom: 8px;
+    height: 65px;
   }
 
-  a.logo {
-    margin: 0 auto;
-    background: url(/assets/images/qnn-logo-smaller.png) no-repeat 0 0;
-    width: 304px;
-    height: 46px;
+  .header_info {
+    line-height: 14px;
   }
 
   #promo ul {

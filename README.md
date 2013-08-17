@@ -1,4 +1,4 @@
-qnnsafe.com-v1
+qnnsafe.com.cn-v1
 ==============
 
 Official QNN Safe website in Chinese (Mid 2013).

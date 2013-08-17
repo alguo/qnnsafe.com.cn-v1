@@ -9,4 +9,5 @@ assets:
 # absolute links
 www:
   qnnsafe:
-    com: http://www.qnnsafe.com
+    com:
+      cn: http://www.qnnsafe.com.cn

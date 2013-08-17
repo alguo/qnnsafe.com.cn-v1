@@ -1,7 +1,16 @@
+.top {
+  height: auto !important;
+}
+
 #billboard {
   height: 540px;
   position: relative;
   overflow: hidden;
+
+  .top {
+    position: static !important;
+    width: 100% !important;
+  }
 
   .bb {
     position: absolute;
@@ -26,6 +35,12 @@
 
     .one {
       top: 150px !important;
+    }
+
+    .top {
+      img {
+        width: 100% !important;
+      }
     }
 
     .title {

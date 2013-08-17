@@ -342,9 +342,9 @@
   }
 
   #billboard {
-    height: 520px;
+    height: 180px;
     .bb {
-      height: 520px;
+      height: 180px;
       .title {
         top: 18px !important;
       }
@@ -353,8 +353,9 @@
       }
       .image {
         top: 170px;
+        width: 100%;
         img {
-          width: 280px;
+          width: 100%;
         }
       }
     }

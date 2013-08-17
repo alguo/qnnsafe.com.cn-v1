@@ -2,28 +2,36 @@
 layout: default
 body_style: page
 ---
-%article
-  #showcase.mi-slider
-    %ul
-      {% for post in site.categories["products"] reversed %}{% if post.type == page.type %}
-      %li{ class: "{% if page.name == post.name %}current{% endif %}" }
-        %a{ href: "{{ post.url }}", title: "{{ post.title }}" }
-          %img{ src: "http://www.qnnsafe.com/image-pro/{{ post.images[0] }}" }
-          %br
-          {{ post.name }}
-      {% endif %}{% endfor %}
-    .nav
+%article.fill
+  #showcase.mi-slider.hide_if_mobile
+  .product_header.show_if_mobile
+    %img{ src: "{{ site.prodimgs }}/{{ page.images[0] }}" }
+    #product_menu.dropdownmenu
+      %a.btn{ href: "{{ page.url }}" } {{ page.type }}{{ page.name }}
+      %a.btn.toggle More
+      %ul.ddmenu
+        {% for post in site.categories["products"] reversed %}{% if post.type == page.type %}
+        %li{ class: "{% if page.name == post.name %}current{% endif %}" }>
+          %a{ href: "{{ post.url }}", title: "{{ post.title }}" }
+            %span.img<
+              %img{ src: "{{ site.prodimgs }}/{{ post.images[0] }}" }
+            %span.text {{ post.name }}
+        {% endif %}{% endfor %}
   .page_nav.is_pager
     %ul
-      %li.active
+      %li.active<
         %a{ href: "#" } 产品概览
-      %li
+      %li<
         %a{ href: "#" } 同系列产品对比
-      %li
+      %li<
         %a{ href: "#" } 常见问题
+      %li.dropdown<
+        %a{ href: "#" }<
+          %span.triangle.down
   {% if page.features %}
   .pages.narrow
-    #product_details
+    #features
+      .tips.show_if_mobile 提示：你可以拖动和捏合缩放此图片。
       {{ page.features | replace:'%PRODIMGS%',site.prodimgs }}
     #compare.hidden
       {{ content }}

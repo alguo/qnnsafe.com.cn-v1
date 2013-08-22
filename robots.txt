@@ -4,7 +4,7 @@ Disallow: /about/
 Disallow: /assets/
 Disallow: /history/
 Disallow: /honors/
-Disallow: /images/
+Disallow: /network/
 Disallow: /maps/
 Disallow: /favicon.ico
 Disallow: /asafe.html
@@ -130,7 +130,6 @@ Disallow: /if-1212sc.html
 Disallow: /if-1500c.html
 Disallow: /if-2500c.html
 Disallow: /if-3000c.html
-Disallow: /index.html
 Disallow: /itg-2040.html
 Disallow: /itg-3342.html
 Disallow: /itg-5840.html

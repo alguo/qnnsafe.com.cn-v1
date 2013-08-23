@@ -1,3 +1,5 @@
+ROOT = File.expand_path('../', __FILE__)
+
 trap("SIGINT") { exit! }
 
 task :default do
@@ -17,4 +19,19 @@ end
 desc 'Preview and watch changes on local machine (development)'
 task :preview do
   puts_and_exec 'jekyll serve --watch --trace'
+end
+
+namespace :edit do
+  desc 'Start editing besides products (development)'
+  task :start do
+    Dir.chdir ROOT
+    system "echo > _layouts/product_article.haml"
+    puts_and_exec 'rake preview'
+  end
+
+  desc 'Finish editing besides products (development)'
+  task :finish do
+    Dir.chdir ROOT
+    system "git checkout HEAD _layouts/product_article.haml"
+  end
 end

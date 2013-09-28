@@ -1,99 +1,30 @@
+---
+layout: nil
+---
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-   <loc>http://www.qnnsafe.com.cn/</loc>
-   <lastmod>2013-09-17</lastmod>
+   <loc>{{ site.www.qnnsafe.com }}</loc>
+   <lastmod>{{ site.time | date:'%Y-%m-%d' }}</lastmod>
    <changefreq>daily</changefreq>
    <priority>1.0</priority>
-</url>
+</url>{% for sp in site.pages %}{% capture lvl %}{{ sp.url | append:'index.html' | split:'/' | size }}{% endcapture %}{% if lvl == '3' %}{% if sp.in_sitemap != 'no' %}
 <url>
-   <loc>http://www.qnnsafe.com.cn/wealth/</loc>
-   <lastmod>2013-09-17</lastmod>
+   <loc>{{ site.www.qnnsafe.com }}{{ sp.url | remove:'index.html' }}</loc>
+   <lastmod>{{ site.time | date:'%Y-%m-%d' }}</lastmod>
    <changefreq>daily</changefreq>
    <priority>0.8</priority>
-</url>
+</url>{% endif %}{% endif %}{% endfor %}{% for sp in site.pages %}{% capture lvl %}{{ sp.url | append:'index.html' | split:'/' | size }}{% endcapture %}{% if lvl > '3' %}{% if sp.in_sitemap != 'no' %}
 <url>
-   <loc>http://www.qnnsafe.com.cn/condition/</loc>
-   <lastmod>2013-09-17</lastmod>
-   <changefreq>daily</changefreq>
-   <priority>0.8</priority>
-</url>
-<url>
-   <loc>http://www.qnnsafe.com.cn/process/</loc>
-   <lastmod>2013-09-17</lastmod>
-   <changefreq>daily</changefreq>
-   <priority>0.8</priority>
-</url>
-<url>
-   <loc>http://www.qnnsafe.com.cn/support/</loc>
-   <lastmod>2013-09-17</lastmod>
-   <changefreq>daily</changefreq>
-   <priority>0.8</priority>
-</url>
-<url>
-   <loc>http://www.qnnsafe.com.cn/return/</loc>
-   <lastmod>2013-09-17</lastmod>
-   <changefreq>daily</changefreq>
-   <priority>0.8</priority>
-</url>
-<url>
-   <loc>http://www.qnnsafe.com.cn/stores/</loc>
-   <lastmod>2013-09-17</lastmod>
-   <changefreq>daily</changefreq>
-   <priority>0.8</priority>
-</url>
-<url>
-   <loc>http://www.qnnsafe.com.cn/news/</loc>
-   <lastmod>2013-09-17</lastmod>
-   <changefreq>daily</changefreq>
-   <priority>0.8</priority>
-</url>
-<url>
-   <loc>http://www.qnnsafe.com.cn/contact/</loc>
-   <lastmod>2013-09-17</lastmod>
-   <changefreq>daily</changefreq>
-   <priority>0.8</priority>
-</url>
-<url>
-   <loc>http://www.qnnsafe.com.cn/news/safe-news7.html</loc>
-   <lastmod>2013-09-17</lastmod>
+   <loc>{{ site.www.qnnsafe.com }}{{ sp.url | remove:'index.html' }}</loc>
+   <lastmod>{{ site.time | date:'%Y-%m-%d' }}</lastmod>
    <changefreq>weekly</changefreq>
    <priority>0.6</priority>
-</url>
+</url>{% endif %}{% endif %}{% endfor %}{% for post in site.posts %}{% if post.in_sitemap != 'no' %}
 <url>
-   <loc>http://www.qnnsafe.com.cn/news/safe-news6.html</loc>
-   <lastmod>2013-09-17</lastmod>
+   <loc>{{ site.www.qnnsafe.com }}{{ post.url }}</loc>
+   <lastmod>{{ site.time | date:'%Y-%m-%d' }}</lastmod>
    <changefreq>weekly</changefreq>
    <priority>0.6</priority>
-</url>
-<url>
-   <loc>http://www.qnnsafe.com.cn/news/safe-news5.html</loc>
-   <lastmod>2013-09-17</lastmod>
-   <changefreq>weekly</changefreq>
-   <priority>0.6</priority>
-</url>
-<url>
-   <loc>http://www.qnnsafe.com.cn/news/safe-news4.html</loc>
-   <lastmod>2013-09-17</lastmod>
-   <changefreq>weekly</changefreq>
-   <priority>0.6</priority>
-</url>
-<url>
-   <loc>http://www.qnnsafe.com.cn/news/safe-news3.html</loc>
-   <lastmod>2013-09-17</lastmod>
-   <changefreq>weekly</changefreq>
-   <priority>0.6</priority>
-</url>
-<url>
-   <loc>http://www.qnnsafe.com.cn/news/safe-news2.html</loc>
-   <lastmod>2013-09-17</lastmod>
-   <changefreq>weekly</changefreq>
-   <priority>0.6</priority>
-</url>
-<url>
-   <loc>http://www.qnnsafe.com.cn/news/safe-news1.html</loc>
-   <lastmod>2013-09-17</lastmod>
-   <changefreq>weekly</changefreq>
-   <priority>0.6</priority>
-</url>
+</url>{% endif %}{% endfor %}
 </urlset>

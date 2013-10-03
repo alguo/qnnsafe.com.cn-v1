@@ -1,0 +1,21 @@
+# DO NOT EDIT HERE! GO TO THIS PAGE: 请勿直接编辑！要更改，请前往：
+# https://github.com/qnn/qnnsafe.com.cn-v1/edit/master/.htaccess
+
+# turn on redirection
+RewriteEngine on
+
+# non-www redirects to www
+RewriteCond %{http_host} ^qnnsafe.com.cn [nc]
+RewriteRule ^(.*)$ http://www.qnnsafe.com.cn/$1 [L,R=301]
+
+# redirect index.html to its folder
+RewriteCond %{THE_REQUEST} ^.*/index.html
+RewriteRule ^(.*)index.html$ http://www.qnnsafe.com.cn/$1 [R=301,L]
+
+# compress html, js and css files
+<ifmodule mod_deflate.c>
+AddOutputFilter DEFLATE html js css
+</ifmodule>
+
+# remove useless header
+Header unset X-UA-Compatible

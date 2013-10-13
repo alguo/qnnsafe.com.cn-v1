@@ -5,6 +5,7 @@ Disallow: /assets/
 Disallow: /history/
 Disallow: /honors/
 Disallow: /network/
+Disallow: /images/
 Disallow: /maps/
 Disallow: /favicon.ico
 Disallow: /products/

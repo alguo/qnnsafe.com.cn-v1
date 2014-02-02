@@ -9,6 +9,10 @@ Official QNN Safe website in Chinese (Mid 2013).
 ✔Responsive
 ✔Static
 
+Please note that this repository is not being actively maintained.
+
+![qnnsafe com cn](https://f.cloud.github.com/assets/1284703/2060077/0a4ce56e-8bf8-11e3-83a1-2975fe02192e.jpg)
+
 Build
 -----
 
